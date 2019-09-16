@@ -1,15 +1,15 @@
 let input = document.querySelector("#guess-input");
-let submit = document.querySelector("#guess-value");
 const form = document.querySelector("form");
-const game = document.getElementById("game");
+const finalValue = document.querySelector(".inputNumber");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
   let compValue = Math.floor(Math.random() * 10) + 1;
-  if (parseInt(input.value) > 10) {
+  if (parseInt(input.value) > finalValue.value) {
     alert("please choose a number between 1 and 10");
   } else if (parseInt(input.value) > 0) {
     console.log(compValue);
+    console.log(finalValue.value);
     if (parseInt(input.value) === compValue) {
       document.querySelector(".message").innerHTML = "You guessed Correctly";
       document.querySelector(".message").style.color = "green";
