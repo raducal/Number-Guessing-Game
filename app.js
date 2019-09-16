@@ -4,7 +4,7 @@ const finalValue = document.querySelector(".inputNumber");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
-  let compValue = Math.floor(Math.random() * 10) + 1;
+  let compValue = Math.floor(Math.random() * finalValue.value) + 1;
   if (parseInt(input.value) > finalValue.value) {
     alert("please choose a number between 1 and 10");
   } else if (parseInt(input.value) > 0) {
